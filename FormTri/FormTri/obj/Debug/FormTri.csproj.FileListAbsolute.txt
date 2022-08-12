@@ -1,0 +1,14 @@
+F:\basedados\formtri\FormTri\FormTri\bin\Debug\FormTri.exe.config
+F:\basedados\formtri\FormTri\FormTri\bin\Debug\FormTri.exe
+F:\basedados\formtri\FormTri\FormTri\bin\Debug\FormTri.pdb
+F:\basedados\formtri\FormTri\FormTri\obj\Debug\FormTri.csproj.AssemblyReference.cache
+F:\basedados\formtri\FormTri\FormTri\obj\Debug\FormTri.csproj.SuggestedBindingRedirects.cache
+F:\basedados\formtri\FormTri\FormTri\obj\Debug\FormTri.Form1.resources
+F:\basedados\formtri\FormTri\FormTri\obj\Debug\FormTri.Properties.Resources.resources
+F:\basedados\formtri\FormTri\FormTri\obj\Debug\FormTri.csproj.GenerateResource.cache
+F:\basedados\formtri\FormTri\FormTri\obj\Debug\FormTri.csproj.CoreCompileInputs.cache
+F:\basedados\formtri\FormTri\FormTri\obj\Debug\FormTri.exe
+F:\basedados\formtri\FormTri\FormTri\obj\Debug\FormTri.pdb
+F:\basedados\formtri\FormTri\FormTri\bin\Debug\System.Data.SqlServerCe.dll
+F:\basedados\formtri\FormTri\FormTri\bin\Debug\PT\System.Data.SqlServerCe.resources.dll
+F:\basedados\formtri\FormTri\FormTri\obj\Debug\FormTri.csproj.CopyComplete
