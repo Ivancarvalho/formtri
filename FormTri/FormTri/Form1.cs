@@ -28,6 +28,7 @@ namespace FormTri
 
         private void btnconectar_Click(object sender, EventArgs e)
         {
+            #region Sql Server
             string baseDados = Application.StartupPath + @"\db\DBSQLServer.sdf";
             string strConection = @"DataSource = "+baseDados+"; Password = '1234'";
 
@@ -57,11 +58,43 @@ namespace FormTri
             finally
             {
                 conexao.Close();
-            }                        
+            }
+            #endregion
+
+            #region MySQL
+            //string strConnection = "server=127.0.0.1;User Id=root;password=admin123";
+            ////string strConnection2 = "server=127.0.0.1;User Id=root;database=curso_db;password=admin123";
+
+            //MySqlConnection conexao = new MySqlConnection(strConnection);
+            ////conexao.ConnectionString = strConnection
+
+            //try
+            //{
+            //    conexao.Open();
+            //    labelCadastro.Text = "Conectado MySQL";
+
+            //    MySqlCommand comando = new MySqlCommand();
+            //    comando.Connection = conexao;
+            //    comando.CommandText = "CREATE  IF NOT EXISTS curso_db";
+            //    comando.ExecuteNonQuery();
+            //    labelCadastro.Text = "Base de Dados criada com sucesso.";
+            //    comando.Dispose();
+            //}
+            //catch (Exception ex)
+            //{
+            //    labelCadastro.Text = "Erro ao conectar MySQL\n" + ex;
+            //}
+            //finally
+            //{
+            //    conexao.Close();
+            //}
+
+            #endregion
         }
 
         private void btncriartabela_Click(object sender, EventArgs e)
         {
+            #region Sql Server
             string baseDados = Application.StartupPath + @"\db\DBSQLServer.sdf";
             string strConection = @"DataSource = " + baseDados + "; Password = '1234'";
 
@@ -74,7 +107,7 @@ namespace FormTri
                 SqlCeCommand comando = new SqlCeCommand();
                 comando.Connection = conexao;
 
-                comando.CommandText = "CREATE TABLE cadastroc(id INT NOT NULL PRIMARY KEY, nome NVARCHAR(100), email NVARCHAR(80), telefone DECIMAL(20,0), celular DECIMAL(20,0), cpf DECIMAL(20,2), cnpj DECIMAL(20,2), razaosocial NVARCHAR(100), classificacao NVARCHAR(10), rua NVARCHAR(50), numero DECIMAL(20,0), bairro NVARCHAR(50), cidade NVARCHAR(50), estado NVARCHAR(20), cep DECIMAL(20,3))";
+                comando.CommandText = "CREATE TABLE cadastroc(id INT NOT NULL PRIMARY KEY, nome NVARCHAR(100), email NVARCHAR(80), telefone NVARCHAR(20), celular NVARCHAR(20), cpf NVARCHAR(20, cnpj NVARCHAR(20) razaosocial NVARCHAR(100), classificacao NVARCHAR(10), rua NVARCHAR(50), numero NVARCHAR(20), bairro NVARCHAR(50), cidade NVARCHAR(50), estado NVARCHAR(20), cep NVARCHAR(20))";
                 comando.ExecuteNonQuery();
 
                 labelResultado.Text = "Tabela Criada no Banco de dados";
@@ -88,6 +121,38 @@ namespace FormTri
             { 
                 conexao.Close(); 
             }
+            #endregion
+
+            #region MySQL
+
+            //string strConnection1 = "server=127.0.0.1;User Id=root;password=admin123";
+            //string strConnection = "server=127.0.0.1;User Id=root;database=curso_db;password=admin123";
+
+            //MySqlConnection conexao = new MySqlConnection(strConnection);
+
+            //try
+            //{
+            //    conexao.Open();
+
+            //    MySqlCommand comando = new MySqlCommand();
+            //    comando.Connection = conexao;
+
+            //    comando.CommandText = "CREATE TABLE cadastro (id INT NOT NULL, nome VARCHAR(100), email VARCHAR(80), telefone VARCHAR(15), celular VARCHAR(15), cpf VARCHAR(11), cnpj VARCHAR(14), razaosocial VARCHAR(100), classificacao VARCHAR(10), rua VARCHAR(50), numero INT(10) bairro VARCHAR(50), cidade VARCHAR(50), estado VARCHAR(20), cep INT(9), PRIMARY KEY(id))";
+            //    comando.ExecuteNonQuery();
+
+            //    labelCadastro.Text = "Tabela Criada MySQL";
+            //    comando.Dispose();
+            //}
+            //catch (Exception ex)
+            //{
+            //    labelCadastro.Text = ex.Message;
+            //}
+            //finally
+            //{
+            //    conexao.Close();
+            //}
+
+            #endregion
         }
 
         private void btninserir_Click(object sender, EventArgs e)
